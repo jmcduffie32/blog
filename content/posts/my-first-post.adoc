@@ -1,0 +1,34 @@
+---
+title: "Setting up Hugo and asciidoc"
+date: 2020-01-28T19:07:04-05:00
+---
+:source-highlighter: rouge
+:rouge-css: style
+
+= Getting Hugo setup to use asciidoc
+
+This was surprisingly easy. All I had to do was make sure the asciidoctor gem was
+installed and use `.adoc` as the file extension. Hugo already supports asciidoc;
+one thing I did find confusing, was that if I wanted to run asciidoctor from the
+command line on one of the Hugo files it would fail. Turns out you have to pass
+`+-a skip-front-matter+` to asciidoctor to tell it to strip out the front matter
+section that Hugo uses.
+
+I spoke a little too soon (I'm writing this post as I get everything set up, bear with me). Getting the block below to format the way I expected was a bit trickier. I needed to first get the exported version of the asciidoctor css file. That wasn't too bad. I found a blog post that gave the necessary attribute to get the job done.
+Using this attribute, I was able to get a standalone css file that I could then include in my Hugo theme.
+
+.asciidoctor command
+[source,bash]
+----
+asciidoctor -a linkcss <filename>
+----
+
+Since I'm just now getting acquainted with Hugo, I wasn't sure how to include a css file. Seems like a simple thing, but I wound up having to rebuild the theme and include it there. I'm fairly certain there's a more correct way of doing this, but for now this works. So with all that out of the way, it's time to say "Hello Hugo!".
+
+
+.hello-world.clj
+[source,clojure]
+----
+(println "Hello Hugo!")
+----
+
