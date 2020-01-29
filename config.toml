@@ -1,0 +1,5 @@
+baseURL = "https://jmcduffie32.github.io/blog"
+languageCode = "en-us"
+title = "JRMcDuffie"
+theme = "ananke"
+publishdir = "D:/Github/jmcduffie32.github.io/blog"
