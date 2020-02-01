@@ -1,5 +1,8 @@
 baseURL = "https://jmcduffie32.github.io/blog"
 languageCode = "en-us"
-title = "JRMcDuffie"
+title = "Dev Talk"
 theme = "ananke"
 publishdir = "D:/Github/jmcduffie32.github.io/blog"
+
+[params]
+  featured_image = "/images/matrix-bg.jpg"
